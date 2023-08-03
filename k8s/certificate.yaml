@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+ 
+kind: Certificate
+metadata:
+  name: moviek8s-com-tls
+spec:
+  secretName: moviek8s-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: moviek8s.com
+  dnsNames:
+    - moviek8s.com
+    - www.moviek8s.com
