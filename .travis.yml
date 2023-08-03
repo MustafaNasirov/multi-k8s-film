@@ -14,14 +14,13 @@ before_install:
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project multi-k8s-film
-  - gcloud config set compute/zone europe-north1-a
+  - gcloud config set compute/zone europe-north1-b
   - gcloud container clusters get-credentials multi-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t mustafansrv/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true mustafansrv/react-test npm test
-
 
 deploy:
   provider: script
