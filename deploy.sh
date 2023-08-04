@@ -11,11 +11,14 @@ docker push mustafansrv/multi-server:$SHA
 docker push mustafansrv/multi-worker:$SHA
 
 kubectl apply -f k8s/crds/
-sleep 30
+sleep 60
+echo "Checking if CRD is installed"
+kubectl get crd certificates.cert-manager.io
 kubectl apply -f k8s/main/
 
 kubectl set image deployments/server-deployment server=mustafansrv/multi-server$SHA
 kubectl set image deployments/client-deployment client=mustafansrv/multi-client$SHA
 kubectl set image deployments/worker-deployment worker=mustafansrv/multi-worker$SHA
+e deployments/worker-deployment worker=mustafansrv/multi-worker$SHA
 
 
