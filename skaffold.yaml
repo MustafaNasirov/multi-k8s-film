@@ -19,26 +19,9 @@ build:
             dest: .
           - src: "src/**/*.html"
             dest: .
-    - image: mustafansrv/multi-worker
-      context: worker
-      docker:
-        dockerfile: Dockerfile.dev
-      sync:
-        manual:
-          - src: "**/*.js"
-            dest: .
-    - image: mustafansrv/multi-server
-      context: server
-      docker:
-        dockerfile: Dockerfile.dev
-      sync:
-        manual:
-          - src: "**/*.js"
-            dest: .
+
 
 deploy:
   kubectl:
     manifests:
       - ./k8s/client-deployment.yaml
-      - ./k8s/server-deployment.yaml
-      - ./k8s/worker-deployment.yaml
