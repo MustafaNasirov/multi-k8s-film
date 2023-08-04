@@ -10,7 +10,10 @@ docker push mustafansrv/multi-client:$SHA
 docker push mustafansrv/multi-server:$SHA
 docker push mustafansrv/multi-worker:$SHA
 
-kubectl apply -f k8s
+kubectl apply -f k8s/crds/
+sleep 30
+kubectl apply -f k8s/main/
+
 kubectl set image deployments/server-deployment server=mustafansrv/multi-server$SHA
 kubectl set image deployments/client-deployment client=mustafansrv/multi-client$SHA
 kubectl set image deployments/worker-deployment worker=mustafansrv/multi-worker$SHA
