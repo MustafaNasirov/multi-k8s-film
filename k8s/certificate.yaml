@@ -11,3 +11,10 @@ spec:
   dnsNames:
     - moviek8s.com
     - www.moviek8s.com
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - moviek8s.com
+          - www.moviek8s.com
