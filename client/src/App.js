@@ -43,14 +43,7 @@ function App() {
         <header className="App-header">
           <h1 className='App-title'>K8s Movie Database</h1>
           <img src={logo} className="App-logo" alt="logo" />
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
         </header>
