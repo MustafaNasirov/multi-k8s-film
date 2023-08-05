@@ -1,4 +1,4 @@
-  import "./MovieCard.scss";
+import "./MovieCard.scss"
 
   const MovieCard = ({id, title, poster}) => {
     
@@ -8,7 +8,6 @@
                   <p className="movie__title">{title}</p>
                   <img className="movie__poster" src={poster} alt="poster" />
               </div> 
-      
       )
     }
 
