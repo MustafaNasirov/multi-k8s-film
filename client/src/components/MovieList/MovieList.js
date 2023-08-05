@@ -3,7 +3,7 @@ import "./MovieList.css";
 
 const MovieList = ({movieArr}) =>{
 
-    const movies = movieArr?.map((movie) => {
+    const movies = movieArr.map((movie) => {
     return(
         <div className='movie__card'>
             <MovieCard

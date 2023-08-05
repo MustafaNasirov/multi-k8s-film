@@ -52,7 +52,7 @@ function App() {
           <Route path="/otherpage" component={OtherPage} />
         </div>
 
-        <Main className='main' movieArr={movies} /> 
+        {movies && <Main movies className='main' movieArr={movies} /> }
         
       </div>
     </Router>
