@@ -1,0 +1,13 @@
+.movie__container{
+    display: grid;
+    gap: 1rem;
+    padding: .25rem;
+    overflow: auto;
+}
+
+.movie__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

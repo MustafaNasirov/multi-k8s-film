@@ -1,1 +1,13 @@
-/*# sourceMappingURL=MovieList.css.map */
+.movie__container {
+  display: grid;
+  gap: 1rem;
+  padding: 0.25rem;
+  overflow: auto;
+}
+
+.movie__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=MovieList.css.map */
