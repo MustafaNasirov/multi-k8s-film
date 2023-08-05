@@ -1,0 +1,22 @@
+.movie__card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 0.2rem;
+  width: 88%;
+  border: solid 0.05rem black;
+  border-radius: 10px;
+  box-shadow: 0.2rem 0.1rem;
+}
+.movie__card .movie__title {
+  font-size: 2rem;
+  padding: 0.3rem;
+}
+.movie__card .movie__poster {
+  width: 30%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 0.5rem;
+}/*# sourceMappingURL=MovieCard.css.map */

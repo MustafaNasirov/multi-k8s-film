@@ -1,0 +1,23 @@
+.movie__card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: .2rem;
+    width: 88%;
+    border: solid 0.05rem black;
+    border-radius: 10px;
+    box-shadow: .2rem .1rem;
+
+    .movie__title{
+        font-size: 2rem;
+        padding: .3rem;
+    }
+
+    .movie__poster{
+        width: 30%;
+        height: auto;
+        object-fit: contain;
+        padding: .5rem;        
+    }
+}
