@@ -1,12 +1,12 @@
-import "./MovieCard.scss"
+import "./MovieCard.css";
 
-  const MovieCard = ({id, title, poster}) => {
+  const MovieCard = ({id, title, poster_path}) => {
     
     return (
       
               <div className="movie__card" key={id}>
                   <p className="movie__title">{title}</p>
-                  <img className="movie__poster" src={poster} alt="poster" />
+                  <img className="movie__poster" src={poster_path} alt="poster" />
               </div> 
       )
     }

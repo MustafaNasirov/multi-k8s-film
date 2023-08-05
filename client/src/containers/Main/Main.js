@@ -1,5 +1,5 @@
 import MovieList from "../../components/MovieList/MovieList";
-import "./Main.scss"
+import "./Main.css";
 
 const Main = ({movies}) => {
    

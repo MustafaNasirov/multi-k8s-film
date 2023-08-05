@@ -1,5 +1,5 @@
-import MovieCard from "../MovieCard/MovieCard"
-import "./MovieCard.scss"
+import MovieCard from "../MovieCard/MovieCard";
+import "./MovieList.css";
 
 const MovieList = ({movieArr}) =>{
 
@@ -9,7 +9,7 @@ const MovieList = ({movieArr}) =>{
             <MovieCard
                 key={movie.id}
                 name={movie.title}
-                img={movie.poster}
+                img={movie.poster_path}
             />
         </div>
         )

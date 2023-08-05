@@ -4,7 +4,6 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import OtherPage from './OtherPage';
 import Fib from './Fib';
-import MovieList from './components/MovieList/MovieList';
 import Main from './containers/Main/Main';
 
 function App() {
