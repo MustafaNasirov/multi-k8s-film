@@ -1,0 +1,28 @@
+.movie__container {
+  display: grid;
+  gap: 1rem;
+  overflow: hidden;
+  padding: 2rem 0rem 4rem;
+}
+@media screen and (min-width: 768px) {
+  .movie__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .movie__container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .movie__container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.movie__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=MovieList.css.map */
