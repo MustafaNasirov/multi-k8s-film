@@ -1,11 +1,23 @@
+
 .movie__container{
     display: grid;
     gap: 1rem;
-    padding: .25rem;
-    overflow: auto;
+    overflow:hidden;
+    padding: 2rem 0rem 4rem;
+
+    @media screen and (min-width: 768px){
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (min-width: 1024px){
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media screen and (min-width: 1440px){
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    } 
 }
 
-.movie__card{
+.movie__item{
     display: flex;
     flex-direction: column;
     justify-content: center;

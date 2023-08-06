@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import OtherPage from './OtherPage';
 import Fib from './Fib';
-import Main from './containers/Main/Main';
+import MovieList from './components/MovieList/MovieList';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -35,14 +35,13 @@ function App() {
     fetchMovies();
   }, []);
 
-  console.log('movies in App:', movies);
 
 
   return (
     <Router>
       <div className="App">
         <header className="App-header">
-          <h1 className='App-title'>K8s Movie Database</h1>
+        <h1 className='App-title'>K8s Movie Database</h1>
           <img src={logo} className="App-logo" alt="logo" />
           
           <Link to="/">Home</Link>
@@ -52,8 +51,9 @@ function App() {
           <Route exact path="/" component={Fib} />
           <Route path="/otherpage" component={OtherPage} />
         </div>
-
-        {movies && <Main className='main' movieArr={movies} /> }
+        <div className='movie-list'>
+          <MovieList movieArr={movies}/>
+        </div>
         
       </div>
     </Router>
