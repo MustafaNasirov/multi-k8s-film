@@ -6,11 +6,10 @@ const MovieList = ({ movieArr }) => { // Use movieArr instead of movies
 
     const movies = movieArr.map((movie) => {
         return (
-            <div  className='movie__card'>
+            <div  className='movie__card' key={movie.id}>
                 <MovieCard
-                    key={movie.id}
-                    name={movie.title}
-                    poster={movie.poster_path}
+                    title={movie.title}
+                    poster_path={movie.poster_path}
                 />
             </div>
         );
