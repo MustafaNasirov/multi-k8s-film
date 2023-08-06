@@ -9,7 +9,7 @@ const MovieList = ({movieArr}) =>{
             <MovieCard
                 key={movie.id}
                 name={movie.title}
-                img={movie.poster_path}
+                poster={movie.poster_path}
             />
         </div>
         )
