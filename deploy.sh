@@ -11,7 +11,7 @@ docker push mustafansrv/multi-server:$SHA
 docker push mustafansrv/multi-worker:$SHA
 
 kubectl apply -f k8s/crds/
-sleep 20
+sleep 45
 echo "Checking if CRD is installed"
 kubectl get crd certificates.cert-manager.io
 
