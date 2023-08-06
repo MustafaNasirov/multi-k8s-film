@@ -35,6 +35,7 @@ function App() {
     fetchMovies();
   }, []);
 
+  console.log('movies in App:', movies);
 
 
   return (
@@ -52,7 +53,7 @@ function App() {
           <Route path="/otherpage" component={OtherPage} />
         </div>
 
-        {movies && <Main className='main' movies={movies} /> }
+        {movies && <Main className='main' movieArr={movies} /> }
         
       </div>
     </Router>

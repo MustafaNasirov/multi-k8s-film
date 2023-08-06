@@ -14,10 +14,11 @@ kubectl apply -f k8s/crds/
 sleep 60
 echo "Checking if CRD is installed"
 kubectl get crd certificates.cert-manager.io
+
 kubectl apply -f k8s/main/
 
-kubectl set image deployments/server-deployment server=mustafansrv/multi-server$SHA
-kubectl set image deployments/client-deployment client=mustafansrv/multi-client$SHA
-kubectl set image deployments/worker-deployment worker=mustafansrv/multi-worker$SHA
+kubectl set image deployments/server-deployment server=mustafansrv/multi-server:$SHA
+kubectl set image deployments/client-deployment client=mustafansrv/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=mustafansrv/multi-worker:$SHA
 
 
