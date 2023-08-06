@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import OtherPage from './OtherPage';
 import Fib from './Fib';
 import Main from './containers/Main/Main';
+
 
 function App() {
   const [movies, setMovies] = useState([]);
