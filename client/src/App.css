@@ -53,3 +53,7 @@
   padding: 1rem;
 }
 
+.calculator__container{
+  padding: 2rem;
+  color: white; 
+}
