@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #1b1d2b;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .App-logo {
@@ -13,8 +15,14 @@
   }
 }
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
 .App-header {
-  background-color: #282c34;
+  background-color: #202837;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -22,17 +30,26 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+} 
+
+.App-title{
+  font-family: 'Nabla', cursive;
+  padding: 2rem;
+  position: relative;
+  font-size: 7rem;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.links__container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
+
+.app__calculator{
+  padding: 1rem;
+}
+

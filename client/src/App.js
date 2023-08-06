@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import OtherPage from './OtherPage';
 import Fib from './Fib';
-import MovieList from './components/MovieList/MovieList';
+import Main from './containers/Main/Main';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -35,25 +35,23 @@ function App() {
     fetchMovies();
   }, []);
 
-
-
   return (
     <Router>
       <div className="App">
         <header className="App-header">
-        <h1 className='App-title'>K8s Movie Database</h1>
-          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className='App-title'>K8s Movie-Database</h1>
           
-          <Link to="/">Home</Link>
-          <Link to="/otherpage">Other Page</Link>
+          <div className='links__container'>
+            <Link to="/">Home</Link>
+            <Link to="/otherpage">Other Page</Link>
+          </div>
         </header>
-        <div>
-          <Route exact path="/" component={Fib} />
-          <Route path="/otherpage" component={OtherPage} />
-        </div>
-        <div className='movie-list'>
-          <MovieList movieArr={movies}/>
-        </div>
+        <Routes>
+          <Route className='app__calculator' path="/" element={<Fib />} />
+          <Route path="/otherpage" element={<OtherPage />} />
+        </Routes>
+
+        {movies && <Main className='main' movieArr={movies} /> }
         
       </div>
     </Router>
