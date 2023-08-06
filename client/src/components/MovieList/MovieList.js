@@ -1,19 +1,19 @@
 import MovieCard from "../MovieCard/MovieCard";
 import "./MovieList.css";
 
-const MovieList = ({movieArr}) =>{
+const MovieList = ({movies}) =>{
 
     const movies = movieArr.map((movie) => {
-    return(
-        <div className='movie__card'>
+        return (
+          <div key={movie.id} className='movie__card'>
             <MovieCard
-                key={movie.id}
-                name={movie.title}
-                poster={movie.poster_path}
+              name={movie.title}
+              poster={movie.poster_path}
             />
-        </div>
-        )
-    })
+          </div>
+        );
+      });
+      
     
     return <div className='movie__container'>{movies}</div>
 }
